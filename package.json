@@ -1,6 +1,6 @@
 {
   "name": "node-buffer-as-typedarray",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "No copy wrap node Buffer as one of the typed array views",
   "main": "index.js",
   "scripts": {
