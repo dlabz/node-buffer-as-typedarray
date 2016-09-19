@@ -151,8 +151,8 @@ function Int16Array(length){
 	this.BYTES_PER_ELEMENT=2;
 	this.length = this.byteLength / this.BYTES_PER_ELEMENT;
 }
-Int16Array.prototype.getter = function(i){return this.buffer.readInt16LE(i)};
-Int16Array.prototype.setter = function(x,i){return this.buffer.writeInt16LE(x,i)};
+Int16Array.prototype.getter = function(i){return this.buffer.readInt16LE(i * this.BYTES_PER_ELEMENT)};
+Int16Array.prototype.setter = function(x,i){return this.buffer.writeInt16LE(x,i * this.BYTES_PER_ELEMENT)};
 Int16Array.prototype.BYTES_PER_ELEMENT=2;
 
 module.exports.Int16Array = function (length){
@@ -168,8 +168,8 @@ function Uint16Array(length){
 	this.BYTES_PER_ELEMENT=2;
 	this.length = this.byteLength / this.BYTES_PER_ELEMENT;
 }
-Uint16Array.prototype.getter = function(i){return this.buffer.readUInt16LE(i)};
-Uint16Array.prototype.setter = function(x,i){return this.buffer.writeUInt16LE(x,i)};
+Uint16Array.prototype.getter = function(i){return this.buffer.readUInt16LE(i * this.BYTES_PER_ELEMENT)};
+Uint16Array.prototype.setter = function(x,i){return this.buffer.writeUInt16LE(x,i * this.BYTES_PER_ELEMENT)};
 Uint16Array.prototype.BYTES_PER_ELEMENT=2;
 
 module.exports.Uint16Array = function (length){
@@ -187,8 +187,8 @@ function Int32Array(length){
 	this.BYTES_PER_ELEMENT=4;
 	this.length = this.byteLength / this.BYTES_PER_ELEMENT;
 }
-Int32Array.prototype.getter = function(i){return this.buffer.readInt32LE(i)};//;
-Int32Array.prototype.setter = function(x,i){return this.buffer.writeInt32LE(x,i)};//'writeInt32LE';
+Int32Array.prototype.getter = function(i){return this.buffer.readInt32LE(i * this.BYTES_PER_ELEMENT)};//;
+Int32Array.prototype.setter = function(x,i){return this.buffer.writeInt32LE(x,i * this.BYTES_PER_ELEMENT)};//'writeInt32LE';
 Int32Array.prototype.BYTES_PER_ELEMENT=4;
 
 module.exports.Int32Array = function (length){
@@ -203,8 +203,8 @@ function Uint32Array(length){
 	this.BYTES_PER_ELEMENT=4;
 	this.length = this.byteLength / this.BYTES_PER_ELEMENT;
 }
-Uint32Array.prototype.getter = function(i){return this.buffer.readUInt32LE(i)};//;
-Uint32Array.prototype.setter = function(x,i){return this.buffer.writeUInt32LE(x,i)};//'writeInt32LE';
+Uint32Array.prototype.getter = function(i){return this.buffer.readUInt32LE(i * this.BYTES_PER_ELEMENT)};//;
+Uint32Array.prototype.setter = function(x,i){return this.buffer.writeUInt32LE(x,i * this.BYTES_PER_ELEMENT)};//'writeInt32LE';
 Uint32Array.prototype.BYTES_PER_ELEMENT=4;
 
 module.exports.Uint32Array = function (length){
@@ -219,8 +219,8 @@ function Float32Array(length){
 	this.BYTES_PER_ELEMENT=4;
 	this.length = this.byteLength / this.BYTES_PER_ELEMENT;
 }
-Float32Array.prototype.getter = function(i){return this.buffer.readFloatLE(i)};//;
-Float32Array.prototype.setter = function(x,i){return this.buffer.writeFloatLE(x,i)};//'writeInt32LE';
+Float32Array.prototype.getter = function(i){return this.buffer.readFloatLE(i * this.BYTES_PER_ELEMENT)};//;
+Float32Array.prototype.setter = function(x,i){return this.buffer.writeFloatLE(x,i * this.BYTES_PER_ELEMENT)};//'writeInt32LE';
 Float32Array.prototype.BYTES_PER_ELEMENT=4;
 
 module.exports.Float32Array = function (length){
@@ -236,8 +236,8 @@ function Float64Array(length){
 	this.BYTES_PER_ELEMENT=8;
 	this.length = this.byteLength / this.BYTES_PER_ELEMENT;
 }
-Float64Array.prototype.getter = function(i){return this.buffer.readDoubleLE(i)};//;
-Float64Array.prototype.setter = function(x,i){return this.buffer.writeDoubleLE(x,i)};//'writeInt32LE';
+Float64Array.prototype.getter = function(i){return this.buffer.readDoubleLE(i * this.BYTES_PER_ELEMENT)};//;
+Float64Array.prototype.setter = function(x,i){return this.buffer.writeDoubleLE(x,i * this.BYTES_PER_ELEMENT)};//'writeInt32LE';
 Float64Array.prototype.BYTES_PER_ELEMENT=8;
 
 module.exports.Float64Array = function (length){
